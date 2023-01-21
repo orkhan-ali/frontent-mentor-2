@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | NFT preview card component</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: "375px",
+            md: "576px",
+            lg: "768px",
+            xl: "1024px",
+          },
+
+          fontFamily: {
+            main: ["Outfit", "sans-serif"],
+          },
+
+          extend : {
+            colors: {
+              softBlue: "#8bacda",
+              cyan : '#00fff7',
+              mainBg : '#0d192b',
+              cardBg : '#14253d',
+              line : '#2f415b'
+            },
+          }
+        },
+      };
+    </script>
+  </head>
+  <body class="flex items-center justify-center bg-mainBg min-h-screen font-main">
+    
+    <main class="max-w-xs">
+      <!-- card component -->
+      <div class="flex flex-col p-5 rounded-xl shadow-xl bg-cardBg space-y-4 max-w-[90%]">
+        <div class="group relative">
+          <img src="images/image-equilibrium.jpg" alt="Equilibrium image">
+          <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-cyan/0 invisible group-hover:bg-cyan/50 group-hover:visible cursor-pointer transition duration-200"><img src="images/icon-view.svg" alt=""></div>
+        </div>
+        <!-- info section -->
+        <section class="flex flex-col space-y-4">
+          <h3 class="text-white font-[600]  text-lg"><a href="#" class="hover:text-cyan">Equilibrium #3429</a></h3>
+          <p class="text-softBlue text-sm font-light">Our Equilibrium collection promotes balance and calm.</p>
+          <!-- price -->
+          <div class="flex justify-between pt-1 pb-6 border-b border-b-line">
+            <span class="flex space-x-2 text-cyan text-xs font-bold"><img src="images/icon-ethereum.svg" alt="" class="h-4"> <p>0.041 ETH</p></span>
+            <span class="flex space-x-2 text-softBlue text-xs"><img src="images/icon-clock.svg" alt="" class="h-4"> <p>3 days left</p></span>
+          </div>
+          <!-- author -->
+          <div class="flex space-x-3 items-center">
+            <img src="images/image-avatar.png" alt="author image" class="w-6 border border-white rounded-full">
+            <span class="font-light text-softBlue text-sm">Creation of <a href="#" class="text-white hover:text-cyan">Jules Wyvern</a></span>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!--   -->
+    <!--    -->
+  </body>
+</html>
